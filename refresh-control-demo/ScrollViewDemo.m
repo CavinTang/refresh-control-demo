@@ -8,9 +8,9 @@
 
 #import "ScrollViewDemo.h"
 
-@interface ScrollViewDemo ()
+@interface ScrollViewDemo () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end
 
@@ -20,12 +20,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
-    self.scrollView.contentSize = CGSizeMake(screenSize.width, screenSize.height + 20);
+    UITableViewController *tableVC = [[UITableViewController alloc] init];
+    tableVC.tableView = self.tableView;
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
-    [self.scrollView addSubview:refreshControl];
+    tableVC.refreshControl = refreshControl;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,6 +42,33 @@
 {
     [refreshControl endRefreshing];
     NSLog(@"end refresh");
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+        CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+        return screenSize.height;
+    } else {
+        return 0.1f;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"IndexCell" forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    return cell;
 }
 
 @end

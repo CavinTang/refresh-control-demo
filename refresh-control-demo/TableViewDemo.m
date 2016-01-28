@@ -20,9 +20,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    UITableViewController *tableVC = [[UITableViewController alloc] init];
+    tableVC.tableView = self.tableView;
+    
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:refreshControl];
+    tableVC.refreshControl = refreshControl;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,7 +53,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 20;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"IndexCell" forIndexPath:indexPath];

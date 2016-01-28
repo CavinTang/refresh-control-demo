@@ -48,7 +48,6 @@
     return self.dataSource.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *reuseIdentifier = nil;
     if (indexPath.row == 0) {

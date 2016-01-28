@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		82125D9A1C59FCEB00363C88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82125D991C59FCEB00363C88 /* main.m */; };
 		82125D9D1C59FCEB00363C88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82125D9C1C59FCEB00363C88 /* AppDelegate.m */; };
-		82125DA01C59FCEB00363C88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82125D9F1C59FCEB00363C88 /* ViewController.m */; };
 		82125DA31C59FCEB00363C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82125DA11C59FCEB00363C88 /* Main.storyboard */; };
 		82125DA51C59FCEB00363C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82125DA41C59FCEB00363C88 /* Assets.xcassets */; };
 		82125DA81C59FCEB00363C88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82125DA61C59FCEB00363C88 /* LaunchScreen.storyboard */; };
+		82125DB11C59FF4500363C88 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82125DB01C59FF4500363C88 /* MenuTableViewController.m */; };
+		82D0BE451C5A06A3009D6EE4 /* TableViewControllerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D0BE431C5A06A3009D6EE4 /* TableViewControllerDemo.m */; };
+		82D0BE491C5A0ABC009D6EE4 /* TableViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D0BE481C5A0ABC009D6EE4 /* TableViewDemo.m */; };
+		82D0BE4C1C5A0AD0009D6EE4 /* ScrollViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D0BE4B1C5A0AD0009D6EE4 /* ScrollViewDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,18 @@
 		82125D991C59FCEB00363C88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82125D9B1C59FCEB00363C88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		82125D9C1C59FCEB00363C88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		82125D9E1C59FCEB00363C88 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		82125D9F1C59FCEB00363C88 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		82125DA21C59FCEB00363C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82125DA41C59FCEB00363C88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82125DA71C59FCEB00363C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82125DA91C59FCEB00363C88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82125DAF1C59FF4500363C88 /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		82125DB01C59FF4500363C88 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		82D0BE421C5A06A3009D6EE4 /* TableViewControllerDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerDemo.h; sourceTree = "<group>"; };
+		82D0BE431C5A06A3009D6EE4 /* TableViewControllerDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerDemo.m; sourceTree = "<group>"; };
+		82D0BE471C5A0ABC009D6EE4 /* TableViewDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDemo.h; sourceTree = "<group>"; };
+		82D0BE481C5A0ABC009D6EE4 /* TableViewDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDemo.m; sourceTree = "<group>"; };
+		82D0BE4A1C5A0AD0009D6EE4 /* ScrollViewDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewDemo.h; sourceTree = "<group>"; };
+		82D0BE4B1C5A0AD0009D6EE4 /* ScrollViewDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewDemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +69,19 @@
 			children = (
 				82125D9B1C59FCEB00363C88 /* AppDelegate.h */,
 				82125D9C1C59FCEB00363C88 /* AppDelegate.m */,
-				82125D9E1C59FCEB00363C88 /* ViewController.h */,
-				82125D9F1C59FCEB00363C88 /* ViewController.m */,
 				82125DA11C59FCEB00363C88 /* Main.storyboard */,
 				82125DA41C59FCEB00363C88 /* Assets.xcassets */,
 				82125DA61C59FCEB00363C88 /* LaunchScreen.storyboard */,
 				82125DA91C59FCEB00363C88 /* Info.plist */,
 				82125D981C59FCEB00363C88 /* Supporting Files */,
+				82125DAF1C59FF4500363C88 /* MenuTableViewController.h */,
+				82125DB01C59FF4500363C88 /* MenuTableViewController.m */,
+				82D0BE421C5A06A3009D6EE4 /* TableViewControllerDemo.h */,
+				82D0BE431C5A06A3009D6EE4 /* TableViewControllerDemo.m */,
+				82D0BE471C5A0ABC009D6EE4 /* TableViewDemo.h */,
+				82D0BE481C5A0ABC009D6EE4 /* TableViewDemo.m */,
+				82D0BE4A1C5A0AD0009D6EE4 /* ScrollViewDemo.h */,
+				82D0BE4B1C5A0AD0009D6EE4 /* ScrollViewDemo.m */,
 			);
 			path = "refresh-control-demo";
 			sourceTree = "<group>";
@@ -110,6 +125,7 @@
 				TargetAttributes = {
 					82125D941C59FCEB00363C88 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = P7KJM4BC35;
 					};
 				};
 			};
@@ -149,8 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82125DA01C59FCEB00363C88 /* ViewController.m in Sources */,
+				82D0BE451C5A06A3009D6EE4 /* TableViewControllerDemo.m in Sources */,
+				82125DB11C59FF4500363C88 /* MenuTableViewController.m in Sources */,
+				82D0BE4C1C5A0AD0009D6EE4 /* ScrollViewDemo.m in Sources */,
 				82125D9D1C59FCEB00363C88 /* AppDelegate.m in Sources */,
+				82D0BE491C5A0ABC009D6EE4 /* TableViewDemo.m in Sources */,
 				82125D9A1C59FCEB00363C88 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +280,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "refresh-control-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cavin.demo.refresh-control-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,7 +293,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "refresh-control-demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cavin.demo.refresh-control-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,6 +321,7 @@
 				82125DAE1C59FCEB00363C88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

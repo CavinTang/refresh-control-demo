@@ -26,6 +26,17 @@
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
+    
+//    UIView *refreshControlContainerView = [[UIView alloc] initWithFrame:CGRectMake(-100, 0, [UIScreen mainScreen].bounds.size.width, 44.0f)];
+//    [self.tableView addSubview:refreshControlContainerView];
+//    [refreshControlContainerView addSubview:self.refreshControl];
+    
+    CGRect bounds = refreshControl.bounds;
+    bounds.origin.x = 50;//左移 50
+//    rect.origin.x = -50;//右移 50
+    bounds.origin.y = 10;//上移 10;
+//    rect.origin.y = -10;//下移 10;
+    refreshControl.bounds = bounds;
 }
 
 - (void)didReceiveMemoryWarning {

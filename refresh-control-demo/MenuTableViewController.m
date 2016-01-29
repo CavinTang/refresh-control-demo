@@ -29,6 +29,7 @@
     [self.dataSource addObject:@"UIRefreshControl in UITableViewController"];
     [self.dataSource addObject:@"UIRefreshControl in UIViewController + UITableView"];
     [self.dataSource addObject:@"UIRefreshControl in UIViewController + UIScrollView"];
+    [self.dataSource addObject:@"UserHome Demo"];
     
     [self.tableView reloadData];
 }
@@ -54,8 +55,10 @@
         reuseIdentifier = @"MenuCellTableVC";
     } else if (indexPath.row == 1) {
         reuseIdentifier = @"MenuCellTableView";
-    } else {
+    } else if (indexPath.row == 2) {
         reuseIdentifier = @"MenuCellScrollView";
+    } else {
+        reuseIdentifier = @"UserHomeDemo";
     }
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     

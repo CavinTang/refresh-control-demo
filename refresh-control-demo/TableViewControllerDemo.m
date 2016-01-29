@@ -33,9 +33,9 @@
     
     CGRect bounds = refreshControl.bounds;
     bounds.origin.x = 50;//左移 50
-//    rect.origin.x = -50;//右移 50
+//    bounds.origin.x = -50;//右移 50
     bounds.origin.y = 10;//上移 10;
-//    rect.origin.y = -10;//下移 10;
+//    bounds.origin.y = -10;//下移 10;
     refreshControl.bounds = bounds;
 }
 
@@ -73,6 +73,8 @@
     
     return cell;
 }
+
+#pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
